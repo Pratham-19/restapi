@@ -1,7 +1,6 @@
 const express=require('express');
 const app=express();
 const logger = require('morgan');
-// const path = require('path');
 const bodyParser=require('body-parser');
 const mongoose=require('mongoose');
 require('dotenv').config()
@@ -17,10 +16,7 @@ db.once('open', function() {
   console.log('Connected to MongoDB!');
 });
 
-
-
 app.use("/uploads", express.static('uploads'));
-
 
 app.use(logger('dev'));
 app.use(bodyParser.urlencoded({extended:false}));

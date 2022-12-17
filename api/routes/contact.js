@@ -29,7 +29,6 @@ router.post("/upload", checkAuth, upload.single("contacts"), (req, res, next) =>
     csvtojson()
     .fromFile(req.file.path)
     .then((csvData) => {
-        // console.log(csvData);
         Contact.insertMany(csvData)
         .then(() => {
             console.log("Data inserted");
@@ -48,10 +47,6 @@ router.post("/upload", checkAuth, upload.single("contacts"), (req, res, next) =>
             error:err
         })
     })
-    // res.status(200).json({
-    //     message: "Data inserted",
-    //     file: req.file.path,
-    // })
 });
 
 module.exports = router;
