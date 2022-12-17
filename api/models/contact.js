@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 
-const userSchema = mongoose.Schema({
-    _id: mongoose.Schema.Types.ObjectId,
+const contactSchema = mongoose.Schema({
     name:{ type: String, required: true},
     phone:{ type: Number, required: true},
     email:{ 
@@ -10,10 +9,11 @@ const userSchema = mongoose.Schema({
         unique: true,
         match: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     },
-    linkedin: {
+    linkedinProfileUrl: {
         type: String,
-        required: true
+        required: true,
+        match: /^((http|https):\/\/)?(www.)?linkedin.com\/in\/[a-zA-Z0-9]+\/?$/
     }
 });
  
-module.exports = mongoose.model('User',userSchema);
+module.exports = mongoose.model('Contact', contactSchema);
