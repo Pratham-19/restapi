@@ -76,7 +76,6 @@ router.post('/signup',(req,res,next)=>{
         if (user.length) {
             return res.status(409).json({
                 message:'User exists',
-                user: user
             })
         }
         else{
