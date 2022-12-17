@@ -25,10 +25,46 @@ npm start
 ```
 
 ## Functionalities
-### 1. Authentication 
-1.1 Creating new User <br>
+### 1. Authentication
 
-1.2 Login as new User  <br>
-1.3 See all users (only authenticated users can see)  <br>
+
+1.1 Creating new User using bcrpyt <br>
+
+![new-user](asset/user-signup.png)
+
+
+1.2 Login with help of bcrpyt & jwt  <br>
+
+![login-user](asset/user-login-pass.png)
+
+> Entering wrong password
+
+![login-user-wrong](asset/user-login-wrong.png)
+
+
+1.3 Authenticating (valid for 1h can change in code ) <br>
+
+![addauth-user](asset/user-addauth.png)
+
+
+1.4 See all users (only authenticated users can see)  <br>
+
+![all-user](asset/users-all.png)
+
+
+1.4 Delete user (Authentication required) <br>
+
+![del-user](asset/user-del.png)
+
+
+
 ### 2. File fetch
-2.1 Uplaoding file and stroing the results in mongodb (only authenticated users)  <br>
+
+2.1 Uplaoding file and stroing the results in mongodb with email and linkein validation using regex (only authenticated users)  <br>
+
+![contact-adddata](asset/contacts-added-data.png)
+
+
+> In database
+
+![contact-db](asset/contacts-db.png)
