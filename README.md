@@ -1,7 +1,7 @@
 # RestApi Tutorial
 This repo contains some basic apis which does the following functionalities -
 - Authenticate user with JWT token 
-- Use malter to input csv file and sstores it into mongodb
+- Use multer to input csv file and sstores it into mongodb
 
 ## How to setup
 1. Clone the project by <br>
@@ -27,6 +27,7 @@ npm start
 ## Functionalities
 ### 1. Authentication 
 1.1 Creating new User <br>
+
 1.2 Login as new User  <br>
 1.3 See all users (only authenticated users can see)  <br>
 ### 2. File fetch
